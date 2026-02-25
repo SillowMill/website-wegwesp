@@ -65,31 +65,31 @@ const CONFIG = {
 
   // Certifications
   certifications: [
-    {"label": "100% Garantie", "icon": "award"},
-    {"label": "Binnen 48 uur", "icon": "filecheck"},
-    {"label": "BTW Geregistreerd", "icon": "leaf"},
+    { "label": "100% Garantie", "icon": "award" },
+    { "label": "Binnen 48 uur", "icon": "filecheck" },
+    { "label": "BTW Geregistreerd", "icon": "leaf" },
   ],
 
   // Services with pricing
   services: [
-    {"title": "Wespenverdelging", "desc": "Professionele verdelging van wespennesten met 100% garantie op resultaat.", "price": "Vanaf €50"},
-    {"title": "Europese Hoornaar", "desc": "Veilige verwijdering van Europese hoornaarnesten door ervaren specialisten.", "price": "Vanaf €65"},
-    {"title": "Aziatische Hoornaar", "desc": "Bestrijding van de invasieve Aziatische hoornaar met professionele technieken.", "price": "Vanaf €75"},
-    {"title": "Grondnesten", "desc": "Verdelging van wespennesten in de grond of moeilijk bereikbare plaatsen.", "price": "Vanaf €55"},
-    {"title": "Preventie Advies", "desc": "Tips en maatregelen om wespen te weren van uw woning en tuin.", "price": "Gratis"},
-    {"title": "Noodgevallen", "desc": "Spoedeisende wespenverdelging bij direct gevaar voor bewoners of huisdieren.", "price": "Vanaf €70"},
+    { "title": "Wespenverdelging", "desc": "Professionele verdelging van wespennesten met 100% garantie op resultaat.", "price": "Vanaf €50" },
+    { "title": "Europese Hoornaar", "desc": "Veilige verwijdering van Europese hoornaarnesten door ervaren specialisten.", "price": "Vanaf €65" },
+    { "title": "Aziatische Hoornaar", "desc": "Bestrijding van de invasieve Aziatische hoornaar met professionele technieken.", "price": "Vanaf €75" },
+    { "title": "Grondnesten", "desc": "Verdelging van wespennesten in de grond of moeilijk bereikbare plaatsen.", "price": "Vanaf €55" },
+    { "title": "Preventie Advies", "desc": "Tips en maatregelen om wespen te weren van uw woning en tuin.", "price": "Gratis" },
+    { "title": "Noodgevallen", "desc": "Spoedeisende wespenverdelging bij direct gevaar voor bewoners of huisdieren.", "price": "Vanaf €70" },
   ],
 
   // Testimonials
   testimonials: [
-    {"name": "Erik M.", "location": "Halle", "text": "Snel geholpen en het wespennest was in een mum van tijd weg. 100% garantie maakt het extra betrouwbaar."},
-    {"name": "Greet D.", "location": "Pepingen", "text": "Binnen 24 uur ter plaatse en het probleem was opgelost. Heel professioneel!"},
-    {"name": "Joeri V.", "location": "Sint-Pieters-Leeuw", "text": "Eerlijke prijs en goede service. Payconiq betaling is ook heel handig."},
+    { "name": "Erik M.", "location": "Halle", "text": "Snel geholpen en het wespennest was in een mum van tijd weg. 100% garantie maakt het extra betrouwbaar." },
+    { "name": "Greet D.", "location": "Pepingen", "text": "Binnen 24 uur ter plaatse en het probleem was opgelost. Heel professioneel!" },
+    { "name": "Joeri V.", "location": "Sint-Pieters-Leeuw", "text": "Eerlijke prijs en goede service. Payconiq betaling is ook heel handig." },
   ],
 
   // Service regions
   regions: [
-    {"region": "Vlaams-Brabant", "cities": ['Halle', 'Asse', 'Beersel', 'Dilbeek', 'Gooik', 'Herne', 'Lennik', 'Liedekerke', 'Pepingen', 'Roosdaal', 'Sint-Pieters-Leeuw', 'Ternat', 'Drogenbos', 'Linkebeek', 'Sint-Genesius-Rode']},
+    { "region": "Vlaams-Brabant", "cities": ['Halle', 'Asse', 'Beersel', 'Dilbeek', 'Gooik', 'Herne', 'Lennik', 'Liedekerke', 'Pepingen', 'Roosdaal', 'Sint-Pieters-Leeuw', 'Ternat', 'Drogenbos', 'Linkebeek', 'Sint-Genesius-Rode'] },
   ],
 
   // Social links
@@ -206,7 +206,8 @@ const Hero = () => {
           alt="Professionele ongediertebestrijder aan het werk in beschermende kleding"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-brand-600/60" />
+        {/* Brand gradient overlay — 70-85% opacity for consistent readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-600/90 via-brand-600/80 to-brand-500/70" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-24">
@@ -215,7 +216,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-500/40 text-brand-50 px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
           >
             <Clock size={16} />
             <span className="font-display font-semibold text-sm">Interventie binnen 24 uur — 7 dagen per week</span>
@@ -232,7 +233,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-brand-50 text-lg md:text-xl mb-10 leading-relaxed"
+            className="text-white text-lg md:text-xl mb-10 leading-relaxed"
           >
             Heeft u last van ongewenste dieren en insecten? Bij {CONFIG.name} zijn we gespecialiseerd in wering en bestrijding van ongedierte over {CONFIG.region}. Snel, discreet en met garantie.
           </motion.p>
